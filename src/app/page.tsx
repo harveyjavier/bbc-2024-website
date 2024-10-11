@@ -1,5 +1,4 @@
 import Image from "next/image";
-import poster from "./images/poster.png";
 import design from "./images/design.png";
 import logoDate from "./images/logo_and_date.png";
 import partners from "./images/partners.png";
@@ -13,10 +12,9 @@ export default function Home() {
           src={logoDate}
           alt="Logo and Date"
           width={400}
-          //layout="fill"
-          //objectFit="contain" // Ensure the image fits within the container while maintaining its aspect ratio
-          objectPosition="center" // Center the image in the view
-          priority // Optional: load image faster
+          objectFit="contain"
+          objectPosition="center"
+          priority
         />
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
@@ -24,6 +22,7 @@ export default function Home() {
           src={partners}
           alt="Partners"
           width={400}
+          objectFit="contain"
           priority
         />
       </footer>
